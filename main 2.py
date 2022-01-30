@@ -22,9 +22,12 @@ def tekst_notatki():
 
 # Funkcja odczytująca zawartość pliku lub zapisująca tekst do pliku
 def operacja_na_pliku(typ_dzialania):
-    sciezka_do_pliku = os.path.join("../Dane", "tekst.txt")
+	lista_notatek = []
+	sciezka_do_pliku = os.path.join("../Dane", "tekst.txt")
+	sciezka_do_katalogu = os.path.join("../Dane")
     try:
         if typ_dzialania == "odczyt":
+        	#lista_notatek = os.listdir(sciezka_do_katalogu)
             odczyt_z_pliku(sciezka=sciezka_do_pliku)
         elif typ_dzialania == "nowa":
             zapis_do_pliku(
@@ -84,8 +87,8 @@ def program_notatnik():
 if __name__ == "__main__":
     program_notatnik()
 
-# TODO: Plan:
-# TODO: Wersja 5 Chmura
+# TODO: Plan
+# TODO: Wersja 5 ChmurA
 # TODO: Wersja 4 Środowisko graficzne
 # TODO: Wersja 3 Lista notatek gdzie nazwa pliku notatki ma być nazwą notatki i wszystkie wcześniejsze operacje<
 # TODO: Wersja 2 Wybór notatki, którą się chce czytać, kasować, dopisywać zawartość poprzez jej wybranie i lub wpisanie
